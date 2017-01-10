@@ -1,14 +1,14 @@
 /*
  * A C-based stager client compat with the Metasploit Framework
  *    based on a discussion on the Metasploit Framework mailing list
- *	  and the version made by Raphael Mudge (https://github.com/rsmudge/metasploit-loader/)
+ *    and the version made by Raphael Mudge (https://github.com/rsmudge/metasploit-loader/)
  * 
  * This version allows you to choose between BIND TCP (default) and REVERSE TCP payload
  * for both 32bit and 64bit architecture. 
  *
  * Compilation:
- *	 MinGW 32bit: gcc met-loader.c -o met-loader -lws2_32 -static -L c:\path_to_mingw\lib
- *   MinGW 64bit: gcc -m64 met-loader.c -o met-loader -lws2_32 -static
+ *	MinGW 32bit: gcc met-loader.c -o met-loader -lws2_32 -static -L c:\path_to_mingw\lib
+ *   	MinGW 64bit: gcc -m64 met-loader.c -o met-loader -lws2_32 -static
  *
  * @author 0-duke
  * @license BSD License.
