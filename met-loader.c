@@ -107,7 +107,7 @@ SOCKET bind_tcp_listen(UINT32 port) {
     /* Bind on port specified */
     if( bind(listen_socket, (struct sockaddr *)&sa_i_listen , sizeof(sa_i_listen)) == SOCKET_ERROR)
     {
-        printf("Bind failed with error code : %d" , WSAGetLastError());
+        perr(listen_socket, "Bind function failed.\n");
     }
     
     listen(listen_socket, 3);
@@ -116,7 +116,7 @@ SOCKET bind_tcp_listen(UINT32 port) {
     new_socket = accept(listen_socket , (struct sockaddr *)&sa_i_new, &c);
     if (new_socket == INVALID_SOCKET)
     {
-        printf("Accept function failed with error code : %d" , WSAGetLastError());
+        perr(listen_socket, "Accept function failed.\n");
     }
 
 	return new_socket;
